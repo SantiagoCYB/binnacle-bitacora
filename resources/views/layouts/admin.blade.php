@@ -22,6 +22,7 @@
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
+
       <header class="main-header">
 
         <!-- Logo -->
@@ -43,14 +44,14 @@
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
               
-              <!-- User Account: style can be found in dropdown.less -->
+             <!-- User Account: style can be found in dropdown.less 
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
                   <span class="hidden-xs">Santiago Cepeda Yepes</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <!-- User image -->
+                   User image 
                   <li class="user-header">
                     
                     <p>
@@ -58,8 +59,8 @@
                       <small>www.twitter.com/Santiagocyb</small>
                     </p>
                   </li>
-                  
-                  <!-- Menu Footer-->
+                  -->
+                  <!-- Menu Footer
                   <li class="user-footer">
                     
                     <div class="pull-right">
@@ -68,7 +69,7 @@
                   </li>
                 </ul>
               </li>
-              
+              -->
             </ul>
           </div>
 
@@ -105,17 +106,18 @@
                 <li><a href="/Proyecto/public/bitacora/conceptos"><i class="fa fa-circle-o"></i>Crear y administrar</br>conceptos</a></li>
               </ul>
             </li>
+
             
-             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Reporte PDF</span>
-                <small class="label pull-right bg-red">PDF</small>
+            <li>
+              <a href="{{ route('personas.excel') }}">
+                <i class="fa fa-plus-square"></i> <span>Personas Excel</span>
+                <small class="label pull-right bg-green">Excel</small>
               </a>
             </li>
 
             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Reporte Excel</span>
+              <a href="{{ route('conceptos.excel') }}">
+                <i class="fa fa-plus-square"></i> <span>Conceptos Excel</span>
                 <small class="label pull-right bg-green">Excel</small>
               </a>
             </li>
