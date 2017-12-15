@@ -20,7 +20,6 @@ class ConceptosController extends Controller
     	{
     		$query=trim($request->get('searchText'));
     		$conceptos=DB::table('conceptos')
-            ->where('estado','=','1')
             ->where('documento', 'LIKE', '%'.$query.'%')
             //->orderBy('id','desc')
     		->paginate(10);
@@ -70,8 +69,7 @@ class ConceptosController extends Controller
     public function destroy($id)
     {
     	$conceptos=Concepto::findOrFail($id);
-        $conceptos->estado='0';
-        $conceptos->update();
+        $conceptos->delete();
         return Redirect::to('bitacora/conceptos');
     }
 }
