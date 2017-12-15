@@ -19,9 +19,7 @@ class PersonasController extends Controller
     	if ($request)
     	{
     		$query=trim($request->get('searchText'));
-    		$personas=DB::table('personas')
-            ->where('condicion','=','1')
-            ->where('documento', 'LIKE', '%'.$query.'%')
+    		$personas=Persona::where('documento', 'LIKE', '%'.$query.'%')
             //->orderBy('id','desc')
     		->paginate(10);
     		return view('bitacora.personas.index', ["personas"=>$personas,"searchText"=>$query]);
@@ -41,7 +39,6 @@ class PersonasController extends Controller
     	$personas->nombre=$request->get('nombre');
     	$personas->direccion=$request->get('direccion');
     	$personas->genero=$request->get('genero');
-        $personas->condicion='1';
     	$personas->save();
     	return Redirect::to('bitacora/personas');
     }
@@ -69,8 +66,7 @@ class PersonasController extends Controller
     public function destroy($id)
     {
     	$personas=Persona::findOrFail($id);
-        $personas->condicion='0';
-        $personas->update();
+        $personas->delete();
         return Redirect::to('bitacora/personas');
     }
     
