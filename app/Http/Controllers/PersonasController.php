@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Persona;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\PersonasFormRequest;
+use Barryvdh\DomPDF\Facade as PDF;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
 
 class PersonasController extends Controller
@@ -68,6 +70,31 @@ class PersonasController extends Controller
     	$personas=Persona::findOrFail($id);
         $personas->delete();
         return Redirect::to('bitacora/personas');
+    }
+
+    public function pdf()
+    {        
+        /**
+         * toma en cuenta que para ver los mismos 
+         * datos debemos hacer la misma consulta
+        **/
+        $personas = Persona::all(); 
+
+        $pdf = PDF::loadView('bitacora.personas.pdf', compact('personas'));
+
+        return $pdf->download('listado.pdf');
+    }
+
+    public function excel()
+    {        
+        Excel::create('Reporte personas', function($excel) {
+            $excel->sheet('Excel sheet', function($sheet) {
+                //otra opción -> $products = Product::select('name')->get();
+                $personas = Persona::all();                
+                $sheet->fromArray($personas);
+                $sheet->setOrientation('landscape');
+            });
+        })->export('xls');
     }
     
 }

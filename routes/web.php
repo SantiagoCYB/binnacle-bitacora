@@ -5,5 +5,12 @@ Route::get('/', function () {
 });
 
 Route::resource('bitacora/personas', 'PersonasController');
-
 Route::resource('bitacora/conceptos', 'ConceptosController');
+
+//Generar pdf
+//Route::get('descarga-personas', 'PersonasController@pdf')->name('personas.pdf');
+
+
+//Generar excel.
+Route::get('descargar-personas', 'PersonasController@excel')->name('personas.excel');
+Route::get('descargar-conceptos', 'ConceptosController@excel')->name('conceptos.excel');

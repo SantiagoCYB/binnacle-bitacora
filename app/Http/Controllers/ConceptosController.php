@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Concepto;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ConceptosFormRequest;
+use Maatwebsite\Excel\Facades\Excel;
 use DB;
 
 class ConceptosController extends Controller
@@ -71,5 +72,17 @@ class ConceptosController extends Controller
     	$conceptos=Concepto::findOrFail($id);
         $conceptos->delete();
         return Redirect::to('bitacora/conceptos');
+    }
+
+    public function excel()
+    {        
+        Excel::create('Reporte Conceptos', function($excel) {
+            $excel->sheet('Excel sheet', function($sheet) {
+                //otra opción -> $products = Product::select('name')->get();
+                $conceptos = Concepto::all();                
+                $sheet->fromArray($conceptos);
+                $sheet->setOrientation('landscape');
+            });
+        })->export('xls');
     }
 }
