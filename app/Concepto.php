@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Concepto extends Model
 {
+    use SoftDeletes;
+    
     protected $table='conceptos';
     protected $primarykey="id";
     protected $dates = ['deleted_at'];
@@ -17,7 +19,6 @@ class Concepto extends Model
     	'codigo',
     	'detalle',
         'descripcion',
-        'estado',
     ];
 }
 

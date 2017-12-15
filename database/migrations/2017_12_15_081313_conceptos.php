@@ -16,7 +16,6 @@ class Conceptos extends Migration
             $table->string('codigo');
             $table->string('detalle');
             $table->string('descripcion');
-            $table->boolean('estado');
             $table->timestamps();
         });
     }

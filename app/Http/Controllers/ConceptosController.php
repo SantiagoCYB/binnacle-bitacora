@@ -20,8 +20,7 @@ class ConceptosController extends Controller
     	if ($request)
     	{
     		$query=trim($request->get('searchText'));
-    		$conceptos=DB::table('conceptos')
-            ->where('documento', 'LIKE', '%'.$query.'%')
+    		$conceptos=Concepto::where('documento', 'LIKE', '%'.$query.'%')
             //->orderBy('id','desc')
     		->paginate(10);
     		return view('bitacora.conceptos.index', ["conceptos"=>$conceptos,"searchText"=>$query]);
@@ -41,7 +40,6 @@ class ConceptosController extends Controller
     	$conceptos->codigo=$request->get('codigo');
     	$conceptos->detalle=$request->get('detalle');
         $conceptos->descripcion=$request->get('descripcion');
-        $conceptos->estado='1';
     	$conceptos->save();
     	return Redirect::to('bitacora/conceptos');
     }
