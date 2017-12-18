@@ -92,7 +92,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/personas"><i class="fa fa-circle-o"></i>Administrar</br> personas</a></li>
+                <li><a href="/Proyecto/public/bitacora/personas"><i class="fa fa-circle-o"></i>Administrar personas</a></li>
               </ul>
             </li>
             
@@ -103,7 +103,7 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/conceptos"><i class="fa fa-circle-o"></i>Administrar</br>conceptos</a></li>
+                <li><a href="/Proyecto/public/bitacora/conceptos"><i class="fa fa-circle-o"></i>Administrar conceptos</a></li>
               </ul>
             </li>
 
