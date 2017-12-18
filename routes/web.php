@@ -8,7 +8,8 @@ Route::resource('bitacora/personas', 'PersonasController');
 Route::resource('bitacora/conceptos', 'ConceptosController');
 
 //Generar pdf
-//Route::get('descarga-personas', 'PersonasController@pdf')->name('personas.pdf');
+Route::get('bitacora/personas', 'PersonasController@index')->name('personas');
+Route::get('descargar-personaspdf', 'PersonasController@pdf')->name('personas.pdf');
 
 
 //Generar excel.
