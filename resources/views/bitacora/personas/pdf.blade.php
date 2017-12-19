@@ -10,7 +10,6 @@
 					<th>Nombre</th>
 					<th>Dirección</th>
 					<th>Genero</th>
-					<th>Opciones</th>
 				</thead>
 				@foreach($personas as $per)
 				<tr>
