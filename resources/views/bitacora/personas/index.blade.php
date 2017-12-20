@@ -31,8 +31,7 @@
 					<td>{{ $per->genero }}</td>
 					<td>
 						<a href="{{URL::action('PersonasController@edit', $per->id)}}"><div class="btn btn-info">Editar</div></a>
-						<a href="" data-target="#modal-delete-{{$per->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
-						<a href="{{ route('personas.pdf') }}" class="btn btn-warning">Descargar reporte en PDF</a>					
+						<a href="" data-target="#modal-delete-{{$per->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>				
 					</td>
 				</tr>
 				@include('bitacora.personas.modal')

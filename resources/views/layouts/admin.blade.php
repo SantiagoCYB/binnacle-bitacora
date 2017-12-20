@@ -121,7 +121,14 @@
                 <small class="label pull-right bg-green">Excel</small>
               </a>
             </li>
-                        
+                    
+            <li>
+              <a href="{{ route('personas.pdf') }}">
+                <i class="fa fa-plus-square"></i> <span>Personas PDF</span>
+                <small class="label pull-right bg-red">PDF</small>
+              </a>
+            </li>
+                  
           </ul>
         </section>
         <!-- /.sidebar -->

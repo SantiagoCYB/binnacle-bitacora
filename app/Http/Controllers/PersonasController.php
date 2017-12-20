@@ -82,7 +82,7 @@ class PersonasController extends Controller
 
         $pdf = PDF::loadView('bitacora.personas.pdf', compact('personas'));
 
-        return $pdf->download('listado.pdf');
+        return $pdf->download('pdf');
     }
 
     public function excel()
