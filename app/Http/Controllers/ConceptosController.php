@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Concepto;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ConceptosFormRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 use Maatwebsite\Excel\Facades\Excel;
 use DB;
 
@@ -82,5 +83,12 @@ class ConceptosController extends Controller
                 $sheet->setOrientation('landscape');
             });
         })->export('xls');
+    }
+
+        public function pdf()
+    {        
+        $conceptos = Concepto::all(); 
+        $pdf = PDF::loadView('bitacora.conceptos.pdf', ['conceptos' => $conceptos]);
+        return $pdf->download('conceptos.pdf');
     }
 }
