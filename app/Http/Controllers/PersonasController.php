@@ -74,15 +74,9 @@ class PersonasController extends Controller
 
     public function pdf()
     {        
-        /**
-         * toma en cuenta que para ver los mismos 
-         * datos debemos hacer la misma consulta
-        **/
         $personas = Persona::all(); 
-
-        $pdf = PDF::loadView('bitacora.personas.pdf', compact('personas'));
-
-        return $pdf->download('pdf');
+        $pdf = PDF::loadView('bitacora.personas.pdf', ['personas' => $personas]);
+        return $pdf->download('personas.pdf');
     }
 
     public function excel()
