@@ -35,15 +35,15 @@
 			</div>
 			<div class="form-group">
 		    <label for="genero">Genero</label> <br/>
-		        <select id="" name="genero" class="form-control" value="{{$personas->genero}}">
-		          <option value="" selected="selected">- Selecciona -</option>
+		        <select id="" name="genero" class="form-control">
+		          <option value="{{$personas->genero}}" selected="selected"> {{$personas->genero}} </option>
 		          <option value="M">Masculino</option>
 		          <option value="F">Femenino</option>
 		    </select>
 		    </div>
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit"> Guardar </button>
-				<button class="btn btn-danger" type="reset"> <a href="/Proyecto/public/bitacora/personas"> Cancelar </button></a>
+				<a href="/Proyecto/public/bitacora/personas" class="btn btn-danger" type="reset" role="button"> Cancelar </a>
 			</div>
 			{!!Form::close()!!}
 		</div>

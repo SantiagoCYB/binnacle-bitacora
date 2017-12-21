@@ -53,7 +53,7 @@
 
 			<div class="form-group">
 				<button class="btn btn-primary" type="submit"> Guardar </button>
-				<button class="btn btn-danger" type="reset"><a href="/Proyecto/public/bitacora/conceptos"> Cancelar </button></a>
+				<a href="/Proyecto/public/bitacora/conceptos" class="btn btn-danger" type="reset" role="button"> Cancelar </a>
 			</div>
 			{!!Form::close()!!}
 		</div>
