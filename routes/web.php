@@ -1,11 +1,12 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::resource('bitacora/personas', 'PersonasController');
 Route::resource('bitacora/conceptos', 'ConceptosController');
+Route::resource('bitacora/usuarios', 'UsuarioController');
 
 //Generar pdf personas
 Route::get('bitacora/personas', 'PersonasController@index')->name('personas');
@@ -18,3 +19,6 @@ Route::get('descargar-conceptospdf', 'ConceptosController@pdf')->name('conceptos
 //Generar excel.
 Route::get('descargar-personas', 'PersonasController@excel')->name('personas.excel');
 Route::get('descargar-conceptos', 'ConceptosController@excel')->name('conceptos.excel');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

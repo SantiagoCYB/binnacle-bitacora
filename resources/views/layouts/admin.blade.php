@@ -26,7 +26,7 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="personas" class="logo">
+        <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>BA</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -44,32 +44,36 @@
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
               
-             <!-- User Account: style can be found in dropdown.less 
+             <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Santiago Cepeda Yepes</span>
+                  <span class="hidden-xs">Santiago</span>
                 </a>
-                <ul class="dropdown-menu">
-                   User image 
+                <ul class="dropdown-menu"> 
                   <li class="user-header">
                     
                     <p>
                       Aprendiendo a desarrollar Software
-                      <small>www.twitter.com/Santiagocyb</small>
+                      <small></small>
                     </p>
                   </li>
-                  -->
-                  <!-- Menu Footer
-                  <li class="user-footer">
-                    
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
-                    </div>
-                  </li>
+                  
+                  <!-- Menu Footer-->
+                  <li>
+                  <a href="{{ route('logout') }}"
+                     onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+                    Cerrar sesión
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                   </form>
+                </li>
                 </ul>
               </li>
-              -->
+              
             </ul>
           </div>
 
@@ -85,6 +89,17 @@
           <ul class="sidebar-menu">
             <li class="header"></li>
             
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span>Usuarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/Proyecto/public/bitacora/usuarios"><i class="fa fa-edit"></i>Administrar Usuarios</a></li>
+              </ul>
+            </li>
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
