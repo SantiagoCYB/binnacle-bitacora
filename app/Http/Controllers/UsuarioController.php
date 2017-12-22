@@ -34,7 +34,7 @@ class UsuarioController extends Controller
 
     public function store(UsuarioFormRequest $request)
     {
-    	$usuarios=new Persona;
+    	$usuarios=new User;
         $usuarios->name=$request->get('name');
     	$usuarios->email=$request->get('email');
     	$usuarios->password=bcrypt($request->get('password'));
