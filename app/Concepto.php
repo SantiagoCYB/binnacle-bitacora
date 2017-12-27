@@ -11,14 +11,17 @@ class Concepto extends Model
     
     protected $table='conceptos';
     protected $primarykey="id";
+    public $timestamps=false;
     protected $dates = ['deleted_at'];
     protected $fillable=[
-    	'id',
-        'documento',
-    	'nombre',
     	'codigo',
-    	'detalle',
+    	'nombre',
         'descripcion',
     ];
+
+    public function persona()
+    {
+        return $this->hasMany('App\Informe');
+    }
 }
 

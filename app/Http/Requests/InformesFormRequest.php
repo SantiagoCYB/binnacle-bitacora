@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ConceptosFormRequest extends FormRequest
+class InformesFormRequest extends FormRequest
 {
 
     public function authorize()
@@ -16,8 +16,6 @@ class ConceptosFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'codigo'=>'required|max:30',
-            'nombre'=>'required|max:255',
             'descripcion'=>'required|max:500',
         ];
     }

@@ -4,23 +4,22 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Conceptos extends Migration
+class Informes extends Migration
 {
 
     public function up()
     {
-        Schema::create('conceptos', function (Blueprint $table) {
+        Schema::create('informes', function (Blueprint $table) {
             $table->increments('id');
-            //$table->Integer('persona_id')->index();
-            $table->string('codigo')->unique();
-            $table->string('nombre');
+            $table->Integer('persona_id')->index();
+            $table->Integer('concepto_id')->index();
             $table->string('descripcion');
+            $table->timestamps();
         });
     }
 
-
     public function down()
     {
-        Schema::dropIfExists('conceptos');
+        Schema::dropIfExists('informes');
     }
 }

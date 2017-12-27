@@ -17,14 +17,6 @@
 			{!!Form::model($conceptos,['method'=>'PATCH', 'route'=>['conceptos.update', $conceptos->id]])!!}
 			{!!Form::token()!!}
 			<div class="form-group">
-				<label for="documento">Documento</label>
-				<input type="text" name="documento" class="form-control" placeholder="Documento" value="{{ $conceptos->documento }}">
-			</div>
-			<div class="form-group">
-				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $conceptos->nombre }}">
-			</div>
-			<div class="form-group">
 		    <label for="codigo">Código</label> <br/>
 		        <select id="" name="codigo" class="form-control">
 		          <option value="" selected="selected">- Selecciona -</option>
@@ -42,8 +34,8 @@
 		    </div>
 
 			<div class="form-group">
-				<label for="detalle">Detalle</label>
-				<input type="text" name="detalle" class="form-control" placeholder="Detalle" value="{{ $conceptos->detalle }}">
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" class="form-control" placeholder="Nombre" value="{{ $conceptos->nombre }}">
 			</div>
 
 			<div class="form-group">

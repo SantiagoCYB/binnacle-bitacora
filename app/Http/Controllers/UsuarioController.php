@@ -65,7 +65,7 @@ class UsuarioController extends Controller
     public function destroy($id)
     {
     	$usuarios=User::findOrFail($id);
-        $personas->delete();
+        $usuarios->delete();
         return Redirect::to('bitacora/usuarios');
     }
 

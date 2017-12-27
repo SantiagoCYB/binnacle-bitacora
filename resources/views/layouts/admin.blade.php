@@ -15,6 +15,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{asset('js/EasyAutocomplete-1.3.5/easy-autocomplete.min.css')}}">
+    <link rel="stylesheet" href="{{asset('js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.css')}}">
+    <link rel="stylesheet" href="{{asset('js/EasyAutocomplete-1.3.5/easy-autocomplete.themes.min.css')}}">
     <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
@@ -47,8 +50,7 @@
              <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Santiago</span>
+                  <small class="bg-green">Online</small>
                 </a>
                 <ul class="dropdown-menu"> 
                   <li class="user-header">
@@ -126,6 +128,20 @@
                 <li><a href="{{ route('conceptos.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
               </ul>
             </li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-server"></i>
+                <span>Informes</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/Proyecto/public/bitacora/informes"><i class="fa fa-edit"></i>Administrar informes</a></li>
+                <li><a href="{{ route('informes.pdf') }}"><i class="fa fa-file-pdf-o"></i>PDF<small class="label pull-right bg-red">PDF</small></a></li>
+                <li><a href="{{ route('informes.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
+              </ul>
+            </li>
+         
          </ul>
         </section>
         <!-- /.sidebar -->
@@ -186,6 +202,11 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('js/app.min.js')}}"></script>
+
+    <script src="{{asset('js/EasyAutocomplete-1.3.5/jquery.easy-autocomplete.min.js')}}"></script>
+
+    <script src="{{asset('js/informes.js')}}"></script>
+
     
   </body>
 </html>

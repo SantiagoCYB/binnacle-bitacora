@@ -10,7 +10,7 @@ class Personas extends Migration
     public function up()
     {
         Schema::create('personas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->string('documento');
             $table->string('apellidos');
             $table->string('nombre');

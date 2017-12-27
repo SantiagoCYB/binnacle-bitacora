@@ -18,14 +18,21 @@ class PersonasController extends Controller
     }
     public function index(Request $request)
     {
-    	if ($request)
-    	{
-    		$query=trim($request->get('searchText'));
-    		$personas=Persona::where('documento', 'LIKE', '%'.$query.'%')
+        if ($request)
+        {
+            if($request->wantsJson()){
+                return Persona::all();
+            }
+            
+            $query=trim($request->get('searchText'));
+            $personas=Persona::where('documento', 'LIKE', '%'.$query.'%')
+            ->orwhere('nombre', 'LIKE', '%'.$query.'%')
+            ->orwhere('apellidos', 'LIKE', '%'.$query.'%')
+            ->orwhere('genero', 'LIKE', '%'.$query.'%')
             //->orderBy('id','desc')
-    		->paginate(10);
-    		return view('bitacora.personas.index', ["personas"=>$personas,"searchText"=>$query]);
-    	}
+            ->paginate(10);
+            return view('bitacora.personas.index', ["personas"=>$personas,"searchText"=>$query]);
+        }
     }
 
     public function create()

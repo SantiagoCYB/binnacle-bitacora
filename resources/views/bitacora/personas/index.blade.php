@@ -13,7 +13,6 @@
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover ">
 				<thead>
-					<th>ID</th>
 					<th>Documento</th>
 					<th>Apellidos</th>
 					<th>Nombre</th>
@@ -23,7 +22,6 @@
 				</thead>
 				@foreach($personas as $per)
 				<tr>
-					<td>{{ $per->id }}</td>
 					<td>{{ $per->documento }}</td>
 					<td>{{ $per->apellidos }}</td>
 					<td>{{ $per->nombre }}</td>

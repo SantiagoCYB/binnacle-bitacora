@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Persona;
 use App\Concepto;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ConceptosFormRequest;
@@ -20,8 +21,13 @@ class ConceptosController extends Controller
     {
     	if ($request)
     	{
+
+            if($request->wantsJson()){
+                return Concepto::all();
+            }
+
     		$query=trim($request->get('searchText'));
-    		$conceptos=Concepto::where('documento', 'LIKE', '%'.$query.'%')
+    		$conceptos=Concepto::where('codigo', 'LIKE', '%'.$query.'%')
             //->orderBy('id','desc')
     		->paginate(10);
     		return view('bitacora.conceptos.index', ["conceptos"=>$conceptos,"searchText"=>$query]);
@@ -35,19 +41,20 @@ class ConceptosController extends Controller
 
     public function store(ConceptosFormRequest $request)
     {
-    	$conceptos=new Concepto;
-        $conceptos->documento=$request->get('documento');
-    	$conceptos->nombre=$request->get('nombre');
-    	$conceptos->codigo=$request->get('codigo');
-    	$conceptos->detalle=$request->get('detalle');
+        $conceptos=new Concepto;
+        $conceptos->codigo=$request->get('codigo');
+        $conceptos->nombre=$request->get('nombre');
         $conceptos->descripcion=$request->get('descripcion');
-    	$conceptos->save();
-    	return Redirect::to('bitacora/conceptos');
+        $conceptos->save();
+        return Redirect::to('bitacora/conceptos');
     }
 
     public function show($id)
     {
     	return view("bitacora.conceptos.show", ["conceptos"=>Concepto::findOrFail($id)]);
+         // Get the Todo by id WITH its author (relationship defined in Todo Model)
+        $conceptos = Concepto::with('perso')->find($id);
+        //return view('todo/show', compact('todo')); 
     }
 
     public function edit($id)
@@ -58,9 +65,8 @@ class ConceptosController extends Controller
     public function update(ConceptosFormRequest $request,$id)
     {
     	$conceptos=Concepto::findOrfail($id);
-    	$conceptos->nombre=$request->get('nombre');
     	$conceptos->codigo=$request->get('codigo');
-    	$conceptos->detalle=$request->get('detalle');
+    	$conceptos->nombre=$request->get('nombre');
     	$conceptos->descripcion=$request->get('descripcion');       
     	$conceptos->update();
     	return Redirect::to('bitacora/conceptos');

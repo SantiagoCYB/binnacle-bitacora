@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title> Conceptos </title>
+	<title> Informes </title>
 	<style type="text/css">
 		table {
 			border-collapse: collapse;
@@ -16,22 +16,23 @@
 	</style>
 </head>
 <body>
-<h1 class="page-header">Listado de conceptos</h1>
+<h1 class="page-header">Listado de informes</h1>
 	<table  style="width:100%">
 		<tr>
 			<th>ID</th>
-					<th>Código</th>
-					<th>Detalle</th>
+					<th>Persona_Id</th>
+					<th>Concepto_Id</th>
 					<th>Descripción</th>
 					<th>Fecha-Reporte</th>
+					<th>Opciones</th>
 				</thead>
-				@foreach($conceptos as $con)
+				@foreach($informes as $inf)
 				<tr>
-					<td>{{ $con->id }}</td>
-					<td>{{ $con->codigo }}</td>
-					<td>{{ $con->detalle }}</td>
-					<td>{{ $con->descripcion }}</td>
-					<td>{{ $con->created_at}}</td>
+					<td>{{ $inf->id }}</td>
+					<td>{{ $inf->persona_id }}</td>
+					<td>{{ $inf->concepto_id }}</td>
+					<td>{{ $inf->descripcion }}</td>
+					<td>{{ $inf->created_at}}</td>
 		</tr>
 		@endforeach
 	</table>

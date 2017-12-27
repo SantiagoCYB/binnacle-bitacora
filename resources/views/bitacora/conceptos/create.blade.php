@@ -14,16 +14,10 @@
 			</div>
 			@endif
 
+
 			{!!Form::open(array('url'=>'bitacora/conceptos','method'=>'POST','autocomplete'=>'off'))!!}
 			{!!Form::token()!!}
-			<div class="form-group">
-				<label for="documento">Documento</label>
-				<input type="text" name="documento" class="form-control" placeholder="Documento">
-			</div>
-			<div class="form-group">
-				<label for="nombre">Nombre</label>
-				<input type="text" name="nombre" class="form-control" placeholder="Nombre">
-			</div>
+
 			<div class="form-group">
 		    <label for="codigo">Código</label> <br/>
 		        <select id="" name="codigo" class="form-control">
@@ -42,8 +36,8 @@
 		    </div>
 
 			<div class="form-group">
-				<label for="detalle">Detalle</label>
-				<input type="text" name="detalle" class="form-control" placeholder="Detalle">
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" class="form-control" placeholder="Nombre">
 			</div>
 
 			<div class="form-group">
