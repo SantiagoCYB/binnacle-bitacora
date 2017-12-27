@@ -17,18 +17,6 @@
 			{!!Form::model($informes,['method'=>'PATCH', 'route'=>['informes.update', $informes->id]])!!}
 			{!!Form::token()!!}
 			<div class="form-group">
-				<label for="persona">Persona</label> <br/>
-				<input name ="persona" class="form-control" id="persona-combo"/>
-				<input type="hidden" name ="persona_id" id="persona-id">
-		    </div>
-
-		    <div class="form-group">
-				<label for="concepto">Concepto</label> <br/>
-				<input name ="concepto" class="form-control" id="concepto-combo"/>
-				<input type="hidden" name ="concepto_id" id="concepto-id">
-		    </div>
-
-			<div class="form-group">
 				<label for="descripcion">Descripción</label>
 				<textarea type="text" name="descripcion" class="form-control"></textarea> 
 			</div>

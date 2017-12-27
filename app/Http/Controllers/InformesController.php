@@ -23,7 +23,7 @@ class InformesController extends Controller
     	if ($request)
     	{
     		$query=trim($request->get('searchText'));
-            $informes=Informe::select('personas.nombre', 'conceptos.codigo', 'informes.descripcion', 'created_at', 'updated_at')
+            $informes=Informe::select('informes.id', 'personas.nombre', 'conceptos.codigo', 'informes.descripcion', 'created_at', 'updated_at')
                 ->join('personas', 'personas.id', '=', 'informes.persona_id')
                 ->join('conceptos', 'conceptos.id', '=', 'informes.concepto_id')
                 ->where('informes.descripcion', 'LIKE', '%'.$query.'%')
@@ -68,8 +68,6 @@ class InformesController extends Controller
     public function update(InformesFormRequest $request,$id)
     {
     	$informes=Informe::findOrfail($id);
-    	$informes->persona_id=$request->get('persona_id');
-    	$informes->concepto_id=$request->get('concepto_id');
     	$informes->descripcion=$request->get('descripcion');       
     	$informes->update();
     	return Redirect::to('bitacora/informes');

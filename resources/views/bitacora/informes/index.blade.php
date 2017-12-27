@@ -13,6 +13,7 @@
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
+					<th>ID</th>
 					<th>Persona</th>
 					<th>Concepto</th>
 					<th>Descripción</th>
@@ -21,6 +22,7 @@
 				</thead>
 				@foreach($informes as $inf)
 				<tr>
+					<td>{{ $inf->id }}</td>
 					<td>{{ $inf->nombre }}</td>
 					<td>{{ $inf->codigo }}</td>
 					<td>{{ $inf->descripcion }}</td>

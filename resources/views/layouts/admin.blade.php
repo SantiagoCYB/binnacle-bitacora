@@ -110,8 +110,6 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/Proyecto/public/bitacora/personas"><i class="fa fa-edit"></i>Administrar personas</a></li>
-                <li><a href="{{ route('personas.pdf') }}"><i class="fa fa-file-pdf-o"></i>PDF<small class="label pull-right bg-red">PDF</small></a></li>
-                <li><a href="{{ route('personas.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
               </ul>
             </li>
 
@@ -124,8 +122,6 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/Proyecto/public/bitacora/conceptos"><i class="fa fa-edit"></i>Administrar conceptos</a></li>
-                <li><a href="{{ route('conceptos.pdf') }}"><i class="fa fa-file-pdf-o"></i> <span>PDF</span><small class="label pull-right bg-red">PDF</small></a></li>
-                <li><a href="{{ route('conceptos.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
               </ul>
             </li>
 
