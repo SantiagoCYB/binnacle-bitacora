@@ -17,6 +17,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
+
+    <style>
+        body{
+            Background-color:black;
+        }
+        #contenedor {
+            width: 1100px;
+            margin: 0 auto;
+            position: absolute;
+            top:  170px; 
+            left: 400px;
+          }
+    </style> 
 </head>
 <body>
     <div id="app">
@@ -29,7 +42,7 @@
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
                     </button>
 
                     <!-- Branding Image -->
