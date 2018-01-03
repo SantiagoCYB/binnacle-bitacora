@@ -13,8 +13,9 @@ class Informes extends Migration
             $table->increments('id');
             $table->Integer('persona_id')->index();
             $table->Integer('concepto_id')->index();
-            $table->string('descripcion');
-            $table->timestamps();
+			$table->string('descripcion');
+			$table->timestamps();
+			$table->softDeletes();
         });
     }
 

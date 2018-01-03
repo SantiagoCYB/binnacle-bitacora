@@ -133,7 +133,6 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/Proyecto/public/bitacora/informes"><i class="fa fa-edit"></i>Administrar informes</a></li>
-                <li><a href="{{ route('informes.pdf') }}"><i class="fa fa-file-pdf-o"></i>PDF<small class="label pull-right bg-red">PDF</small></a></li>
                 <li><a href="{{ route('informes.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
               </ul>
             </li>

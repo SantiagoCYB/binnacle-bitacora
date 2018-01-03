@@ -14,7 +14,8 @@ class Conceptos extends Migration
             //$table->Integer('persona_id')->index();
             $table->string('codigo')->unique();
             $table->string('nombre');
-            $table->string('descripcion');
+			$table->string('descripcion');
+			$table->softDeletes();
         });
     }
 

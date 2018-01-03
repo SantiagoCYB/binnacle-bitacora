@@ -20,17 +20,16 @@
 	<table  style="width:100%">
 		<tr>
 			<th>ID</th>
-					<th>Persona_Id</th>
-					<th>Concepto_Id</th>
+					<th>Persona</th>
+					<th>Concepto</th>
 					<th>Descripción</th>
 					<th>Fecha-Reporte</th>
-					<th>Opciones</th>
 				</thead>
 				@foreach($informes as $inf)
 				<tr>
 					<td>{{ $inf->id }}</td>
-					<td>{{ $inf->persona_id }}</td>
-					<td>{{ $inf->concepto_id }}</td>
+					<td>{{ $inf->nombre }}</td>
+					<td>{{ $inf->codigo }}</td>
 					<td>{{ $inf->descripcion }}</td>
 					<td>{{ $inf->created_at}}</td>
 		</tr>

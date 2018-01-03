@@ -15,7 +15,8 @@ class Personas extends Migration
             $table->string('apellidos');
             $table->string('nombre');
             $table->string('direccion');
-            $table->string('genero');
+			$table->string('genero');
+			$table->softDeletes();
         });
     }
 

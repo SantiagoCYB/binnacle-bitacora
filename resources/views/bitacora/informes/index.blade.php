@@ -30,6 +30,7 @@
 					<td>
 						<a href="{{URL::action('InformesController@edit', $inf->id)}}"><div class="btn btn-info">Editar</div></a>
 						<a href="" data-target="#modal-delete-{{$inf->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href="{{ route('informes.pdf') }}?id=1" data-target=""><button class="btn btn-warning fa fa-file-pdf-o">Reporte en PDF</button></a>
 					</td>
 				</tr>
 				@include('bitacora.informes.modal')
