@@ -187,7 +187,7 @@
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
         </div>
-        <strong><a target="_blank" href="https://www.instagram.com/santiagocy/">Acerca de mi.</a></strong> 
+        <strong><a target="_blank" href="https://twitter.com/SantiagoCYB">Acerca de mi.</a></strong> 
       </footer>
 
       
