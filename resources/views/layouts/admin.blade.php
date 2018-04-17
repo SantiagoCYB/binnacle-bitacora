@@ -98,7 +98,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/usuarios"><i class="fa fa-edit"></i>Administrar Usuarios</a></li>
+                <li><a href="/bitacora/usuarios"><i class="fa fa-edit"></i>Administrar Usuarios</a></li>
               </ul>
             </li>
 
@@ -109,7 +109,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/personas"><i class="fa fa-edit"></i>Administrar personas</a></li>
+                <li><a href="/bitacora/personas"><i class="fa fa-edit"></i>Administrar personas</a></li>
               </ul>
             </li>
 
@@ -121,7 +121,7 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/conceptos"><i class="fa fa-edit"></i>Administrar conceptos</a></li>
+                <li><a href="/bitacora/conceptos"><i class="fa fa-edit"></i>Administrar conceptos</a></li>
               </ul>
             </li>
 
@@ -132,7 +132,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/Proyecto/public/bitacora/informes"><i class="fa fa-edit"></i>Administrar informes</a></li>
+                <li><a href="/bitacora/informes"><i class="fa fa-edit"></i>Administrar informes</a></li>
                 <li><a href="{{ route('informes.excel') }}"><i class="fa fa-file-excel-o"></i> <span>Excel</span><small class="label pull-right bg-green">Excel</small></a></li>
               </ul>
             </li>
