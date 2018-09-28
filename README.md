@@ -1,4 +1,4 @@
-Quick start and environment ready.
+## Quick start & Development environment ready
 
 To start you have to have installed on your computer [`laravel and composer`](https://laravel.com/docs/5.7) in order to use the commands necessary to obtain the database of the application, starting with :
 
