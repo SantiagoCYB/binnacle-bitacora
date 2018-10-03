@@ -20,7 +20,7 @@
 
     <style>
         body{
-            Background-color:black;
+            Background-color:white;
         }
         #contenedor {
             width: 1100px;
