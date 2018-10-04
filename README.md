@@ -27,4 +27,4 @@ Password: pass
 
 
 And this is it, you can explore my first web development project that uses php with the Laravel framework (Do not be harsh with me, seriously it's the first of all)
-It is a blog, where people are registered for example students, and various concepts such as notifications of late arrivals or absences in class and then you can generate reports of the concepts made and by the student that the girl with what was said in the concept .
+It is a blog, where people are registered for example students, and various concepts such as notifications of late arrivals or absences in class and then you can generate reports of the concepts made and by the student that with what was said in the concept .
